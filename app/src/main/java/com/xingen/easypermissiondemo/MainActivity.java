@@ -178,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
       Observable<Bitmap> bitmapObservable= ObservableUtils.loadPictureBitmap(getApplicationContext(), picturePath, show_iv);
         executeObservableTask(bitmapObservable);
     }
+    @SuppressWarnings("all")
     private void executeObservableTask(Observable<Bitmap> observable) {
         Subscription subscription = observable
                 .subscribeOn(Schedulers.io())
